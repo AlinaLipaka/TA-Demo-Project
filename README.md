@@ -7,8 +7,6 @@ This is a **demo test automation project** created using **Selenide** and **Java
 
 ## 2. Environment
 The following environment was used to create and test this project:
-- **OS**: macOS Sonoma (aarch64)
-- **IDE**: IntelliJ IDEA Community Edition 2024.3.2.1
 - **Java**: Java SDK 21
 - **Gradle**: Gradle 8.3
 
