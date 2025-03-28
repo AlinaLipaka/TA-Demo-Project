@@ -15,6 +15,7 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+target/cucumber-reports.html
 
 ### Eclipse ###
 .apt_generated
