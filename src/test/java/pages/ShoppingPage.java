@@ -14,6 +14,7 @@ public class ShoppingPage {
     public static final ElementsCollection productThumbnails = $$(byClassName("thumbnail-top"));
     public static final ElementsCollection itemQuickViewButton = $$(byClassName("quick-view"));
     public static final SelenideElement shopItemsSection = $(byId("products"));
+    public static final SelenideElement priceFilterRange = $(byXpath("//*[contains(@id, '_facet_label')]"));
 
     //item quick view
     public static final SelenideElement increaseQtyBtn = $(byXpath("//i[contains(@class, 'up')][contains(@class, 'touchspin')]"));

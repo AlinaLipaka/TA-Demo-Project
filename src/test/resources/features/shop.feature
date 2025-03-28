@@ -11,7 +11,7 @@ Feature: demo.prestashop.com
       And I navigate to "Home accessories" section
       And I can see items in Shop
       And I filter items by price from 18 to 23
-      And All item prices are in range from 14.0 to 45.0
+      And All item prices are in range from 18.0 to 23.0
     When I open quick view for filtered item 1 of the list
       And I increase item quantity for 1
       And I click "Add to cart" button in quick view
@@ -19,7 +19,7 @@ Feature: demo.prestashop.com
       And I can see correct total items price in success modal
     When I close success modal window
       And I can see items in Shop
-      And I open quick view for filtered item 4 of the list
+      And I open quick view for filtered item 3 of the list
       And I click "Add to cart" button in quick view
     Then Success modal is displayed
       And I can see correct total items price in success modal
