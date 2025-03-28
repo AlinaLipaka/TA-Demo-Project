@@ -1,12 +1,14 @@
 package stepDefinitions;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import helpers.World;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
 import pages.ShoppingPage;
 
 import java.time.Duration;
@@ -19,14 +21,15 @@ import static org.junit.Assert.assertEquals;
 public class ShoppingSteps {
 
     @And("I filter items by price from {int} to {int}")
-        public void iFilterItemsByPriceFromTo(int rangeFrom, int rangeTo) {
+        public void iFilterItemsByPriceFromTo(int rangeFrom, int rangeTo) throws InterruptedException {
         SelenideElement leftSlider = ShoppingPage.priceSliders.get(0);
         SelenideElement rightSlider = ShoppingPage.priceSliders.get(1);
-        /*
 
-        Here should be code for interaction with slider
-
-         */
+        Actions action = new Actions(Selenide.webdriver().object());
+        action.dragAndDropBy(leftSlider, 31, 0).perform();
+        Thread.sleep(1000);
+        action.dragAndDropBy(rightSlider, -143, 0).perform();
+        Thread.sleep(1000);
     }
 
     @Then("All item prices are in range from {double} to {double}")
